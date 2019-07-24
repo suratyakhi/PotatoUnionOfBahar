@@ -1,0 +1,124 @@
+﻿@model IEnumerable<PotatoUnionOfBahar.Areas.Administrator.Models.Admin>
+
+@{
+    ViewBag.Title = "Index";
+    Layout = "~/Areas/Administrator/Views/Shared/_Layout.cshtml";
+}
+
+<h2>Index</h2>
+
+<p>
+    @Html.ActionLink("Create New", "Create")
+</p>
+<table class="table">
+    <tr>
+        <th>
+            @Html.DisplayNameFor(model => model.Name)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Family)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Age)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Licence1)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Licence2)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Licence3)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Prof1)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Prof2)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Prof3)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Fav1)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Fav2)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Fav3)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Email)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Mobile)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Phone)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Address)
+        </th>
+        <th></th>
+    </tr>
+
+@foreach (var item in Model) {
+    <tr>
+        <td>
+            @Html.DisplayFor(modelItem => item.Name)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Family)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Age)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Licence1)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Licence2)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Licence3)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Prof1)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Prof2)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Prof3)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Fav1)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Fav2)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Fav3)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Email)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Mobile)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Phone)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Address)
+        </td>
+        <td>
+            @Html.ActionLink("Edit", "Edit", new { id=item.ID }) |
+            @Html.ActionLink("Details", "Details", new { id=item.ID }) |
+            @Html.ActionLink("Delete", "Delete", new { id=item.ID })
+        </td>
+    </tr>
+}
+
+</table>
